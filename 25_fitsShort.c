@@ -7,10 +7,11 @@
  *   Legal ops: ! ~ & ^ | + << >>
  *   Max ops: 8
  *   Rating: 1
+ *   if the upper 17 bits of x is the same then x can fit into short
  */
 int fitsShort(int x)
 {
-    return 2;
+    return !((x >> 15) ^ (x >> 16));
 }
 
 int test_fitsShort(int x)

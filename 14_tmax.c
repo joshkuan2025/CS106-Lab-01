@@ -8,9 +8,9 @@
  */
 int tmax(void)
 {
-    return 2;
+    return ~(1 << 31);
 }
-
+// Tmax = 0111 1111
 int test_tmax(void)
 {
     return 0x7FFFFFFF;
